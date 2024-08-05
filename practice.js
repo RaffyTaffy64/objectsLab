@@ -116,10 +116,10 @@ function greaterThan10(obj) {
   Return the updated object.
 */
 
-function double(obj) {
-  for (let val in obj) {
-    obj.val = val * 2
-  } return obj
+function double(object) {
+  for (let value in object) {
+    object [value] = object [value] * 2
+  } return object
 }
 
 /// ////////////// PROBLEM 7 ///////////////////
@@ -129,11 +129,11 @@ function double(obj) {
 */
 
 function showValues(obj) {
-  
-  const {val1, val2} = obj 
-    return ([val1 + val2])
-   
-  } 
+  let concatenatedString = ``
+  for (let val in obj) {
+    concatenatedString += obj [val]
+  } return concatenatedString
+} 
 
 
 /// ////////////// PROBLEM 8 ///////////////////
@@ -144,14 +144,14 @@ function showValues(obj) {
   Return that object so that whenever you invoke makeCard, you get a brand new credit card.
 */
 
-function makeCard() {
-  const newCard = {
-  cardNumber: ``,
-  expirationDate: ``,
-  securityCode: ``}
-return newCard
+function makeCard(cardNumber, expirationDate, securityCode) {
+  const creditCard = {
+    cardNumber: cardNumber,
+    expirationDate: expirationDate,
+    securityCode: securityCode,
+  } 
+  return creditCard
   }
-
 /// ////////////// PROBLEM 9 ///////////////////
 
 /*
@@ -159,8 +159,8 @@ return newCard
   Delete the property password and return the object.
 */
 
-function removePassword(obj){
-  delete obj.value
+function removePassword(obj) {
+  delete obj.password
   return obj
 } 
 
@@ -179,11 +179,7 @@ const deleteTheBigNumbers = {
   Write a for...in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
 */
 
-for (val in deleteTheBigNumbers) {
-  if (deleteTheBigNumbers.val > 100) {
-    delete deleteTheBigNumbers.val
-  }
-}
+for (val in deleteTheBigNumbers) {}
 
 /*
   Once you complete a problem, refresh ./destructuring.html in your browser and check to see if the problem's test(s) are passing.
@@ -208,7 +204,7 @@ const carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables.
 */
 
-//Code Here
+const {color, make, model, year} = carDetails
 
 /// ////////////// PROBLEM 12 ///////////////////
 
@@ -219,7 +215,7 @@ const carDetails = {
 */
 
 function greeting(obj) {
-  //Code Here
+  const {firstName, lastName, title} = obj
 
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
@@ -236,7 +232,18 @@ function greeting(obj) {
   Sum up the values and return the total number.
 */
 
-//Code Here
+function totalPopulation(obj) {
+ const obj = [
+ {
+  utah : 1
+  california : 2
+  texas : 3
+  arizona : 4
+ }]
+ const {utah, california, texas, arizona} = obj
+ 
+ return obj
+}
 
 /// ////////////// PROBLEM 14 ///////////////////
 
