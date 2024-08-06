@@ -179,7 +179,10 @@ const deleteTheBigNumbers = {
   Write a for...in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
 */
 
-for (val in deleteTheBigNumbers) {}
+for (const val in deleteTheBigNumbers) {
+  if (deleteTheBigNumbers[val] > 100) {
+  delete deleteTheBigNumbers[val]}
+}
 
 /*
   Once you complete a problem, refresh ./destructuring.html in your browser and check to see if the problem's test(s) are passing.
@@ -205,6 +208,7 @@ const carDetails = {
 */
 
 const {color, make, model, year} = carDetails
+
 
 /// ////////////// PROBLEM 12 ///////////////////
 
@@ -232,18 +236,7 @@ function greeting(obj) {
   Sum up the values and return the total number.
 */
 
-function totalPopulation(obj) {
- const obj = [
- {
-  utah : 1
-  california : 2
-  texas : 3
-  arizona : 4
- }]
- const {utah, california, texas, arizona} = obj
- 
- return obj
-}
+function totalPopulation(obj) {}
 
 /// ////////////// PROBLEM 14 ///////////////////
 
@@ -255,7 +248,9 @@ function totalPopulation(obj) {
   Return false otherwise.
 */
 
-//Code Here
+function usCanadaBorder([latitude, longitude]) {
+  return latitude === 49 && longitude >= -123 && longitude <= -95
+}
 
 /// ////////////// PROBLEM 15 ///////////////////
 
@@ -301,7 +296,15 @@ const employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
+function employeeUpdater() {
+  for (let employee in employees) {
+    if (employees[firstName] === 'Theo') {
+      delete employees
+    } if (employees[firstName] === 'Lorie') {
+      employees[department] = 'HR'
+    }
+  }return employees
+}
 
 /// ////////////// PROBLEM 16 ///////////////////
 
@@ -328,8 +331,8 @@ const cat = {
 */
 
 //Code Here
-let grumpyActivity;
-let fluffy2ndFriend;
+let grumpyActivity = cat[0].activities[1]
+let fluffy2ndFriend = cat[1].name
 
 /// ////////////// PROBLEM 17 ///////////////////
 
@@ -367,7 +370,13 @@ const myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+function recordCleaner() {
+//   for (const key in myCar.accidents) {
+//     if (accidents[].key[2] === true) {
+//       accidents[].key[2] = false
+//     }
+//   }
+}
 
 /// ////////////// PROBLEM 18 ///////////////////
 
